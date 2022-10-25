@@ -1,0 +1,163 @@
+body {
+    background: rgb(48, 25, 52);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.pumpkin {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: #e07014 solid 5px;
+    background: #FA831C;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    align-items: baseline;
+}
+
+.pumpkin:before,
+.pumpkin:after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #FA831C;
+    border: #e07014 solid 5px;
+    margin-left: -180px;
+    z-index: -1;
+}
+
+.pumpkin:after {
+    margin-left: 180px;
+}
+
+.stem {
+    position: absolute;
+    width: 75px;
+    height: 60px;
+    background: #42280E;
+    margin-top: -50px;
+}
+
+.lefteye,
+.righteye {
+    background: black;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lefteye {
+    margin-left: -190px;
+}
+
+.righteye {
+    margin-left: 190px;
+}
+
+.nose {
+    background: black;
+    clip-path: polygon(50% 65%, 0 0, 100% 0);
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    margin-top: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mouth {
+    background: black;
+    clip-path: circle(49.3% at 50% 0);
+    width: 175px;
+    height: 100px;
+    position: absolute;
+    margin-top: 195px;
+    display: flex;
+    justify-content: center;
+}
+
+.mouth:before,
+.mouth:after {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    background: #FA831C;
+    left: 35px;
+}
+
+.mouth:after {
+    left: 105px;
+}
+
+.body {
+    background: black;
+    clip-path: polygon(100% 0, 100% 70%, 50% 100%, 0 70%, 0 0, 50% 26%);
+    width: 55px;
+    height: 100px;
+    position: absolute;
+    left: -508px;
+    margin-top: -50px;
+}
+
+.right {
+    background: black;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    display: flex;
+    clip-path: polygon(1% 45%, 28% 10%, 87% 34%, 62% 34%, 50% 41%, 36% 37%);
+    left: -475px;
+    margin-top: -150px;
+}
+
+.left {
+    transform: scaleX(-1);
+    background: black;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    display: flex;
+    clip-path: polygon(1% 45%, 28% 10%, 87% 34%, 62% 34%, 50% 41%, 36% 37%);
+    left: -640px;
+    margin-top: -70px;
+}
+
+.bat {
+    animation: batAnim 5s infinite;
+}
+
+
+
+
+@keyframes batAnim {
+    0% {
+        transform: translatex(0px);
+    }
+
+    50% {
+        transform: translatex(200px);
+    }
+
+    100% {
+        transform: translatex(0px);
+    }
+}
